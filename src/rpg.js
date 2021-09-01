@@ -26,5 +26,9 @@ export class Job {
 }
 
 export class Merchant {
-  
+  constructor(name, inventory) {
+    this.name = name;
+    this.inventory = inventory;
+  }
 }
+
