@@ -23,5 +23,8 @@ export class Job {
     this.inventory = inventory;
     this.money = money;
   }
+}
+
+export class Merchant {
   
 }

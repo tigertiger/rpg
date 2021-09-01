@@ -1,4 +1,4 @@
-import {Character, Job} from './../src/rpg.js';
+import {Character, Job, Merchant} from './../src/rpg.js';
 import {goon} from './../src/jobs.js';
 
 describe('Character', () => {
@@ -23,4 +23,14 @@ describe('Character', () => {
     expect(player2.money).toEqual(10);
   });
 
+});
+
+describe('Merchant', () => {
+  let merchant;
+  beforeEach(() => {
+    merchant = new Merchant("OT-IK", ["Soup for your Family"]);
+  });
+  test('should be able to see OT-IKs inventory', () => {
+    expect(merchant.inventory).toEqual(["Soup for your Family"]);
+  });
 });
