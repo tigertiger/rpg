@@ -19,6 +19,16 @@ export class Character {
       }
     }
   }
+  
+  sellItem(selected) {
+    let index = this.inventory.indexOf(selected);
+    this.inventory.splice(index,1);
+    for (let w=0; w<items.length; w++){
+      if (selected === items[w].item){
+        return this.money += Math.floor(items[w].price * 0.8);
+      }
+    }
+  }
 }
 
 export class Job {

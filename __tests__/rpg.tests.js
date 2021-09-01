@@ -28,6 +28,13 @@ describe('Character', () => {
   test("should correctly display the sell price of user items", () => {
     expect(player.viewSellPrice()).toEqual(4,4);
   });
+
+  test("should add money & remove a selected item to/from player inventory", () => {
+    let selected = "mega gulp";
+    player.sellItem(selected);
+    expect(player.inventory).toEqual(["sack lunch"]);
+    expect(player.money).toEqual(4);
+  });
 });
 
 describe('Merchant', () => {
