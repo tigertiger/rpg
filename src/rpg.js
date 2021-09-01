@@ -1,3 +1,5 @@
+import {items} from './../src/world-inventory.js';
+
 export class Character {
   constructor(name, level, exp, job, inventory, money) {
     this.name = name;
@@ -29,6 +31,16 @@ export class Merchant {
   constructor(name, inventory) {
     this.name = name;
     this.inventory = inventory;
+  }
+
+  viewGoods() {
+    for (let w=0; w<items.length; w++) {
+      for (let m=0; m<this.inventory.length; m++) {
+        if(items[w].item === this.inventory[m]) {
+          return items[w].price;
+        }
+      }
+    }
   }
 }
 
