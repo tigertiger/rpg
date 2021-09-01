@@ -1,4 +1,5 @@
-import {Character} from './../src/rpg.js';
+import {Character, Job} from './../src/rpg.js';
+import {goon} from './../src/jobs.js';
 
 describe('Character', () => {
   let player;
@@ -13,5 +14,13 @@ describe('Character', () => {
     expect(player.job).toEqual("Civilian");
     expect(player.inventory).toEqual(["sack lunch"]);
     expect(player.money).toEqual(0);
-  })
+  });
+
+  test('should add correct starting values based on chosen job [goon]', () => {
+    let player2 = new Character("Jerry", 1, 0, goon.job, goon.inventory, goon.money);
+    expect(player2.job).toEqual("Goon");
+    expect(player2.inventory).toEqual(["hockey stick", "skates", "Mega Gulp"]);
+    expect(player2.money).toEqual(10);
+  });
+
 });

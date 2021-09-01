@@ -6,7 +6,30 @@ space miners,
 -- name
 -- level
 ---- exp
--- class [attack, defense, hp]
+-- job [attack, defense, hp, starting gold]
+JOBLIST:
+-- goon
+--- hockey stick, skates, mega gulp
+--- 10 dogecoin
+-- IT guy
+-- sanitation technician
+-- soda jerk [stowaway]
+-- crust punk [stowaway]
+-- lumberjack [stowaway]
+<!-- -- mercenery
+-- trader
+-- spaaaace wizard
+-- contract worker
+-- mechanic
+-- miner
+-- accountant
+-- influencer/youtuber
+-- developer
+-- chef
+-- custodian -->
+
+
+
 <!-- -- race -->
 <!-- -- hp -->
 <!-- -- stats -->
@@ -14,7 +37,7 @@ space miners,
 -- defense -->
 <!-- ** held items/weapons [wait on this, cause it's going to be hard] -->
 -- inventory {}
--- MONEY GOLD PIECES! Platinum! Riches. Treasure.
+<!-- -- MONEY GOLD PIECES! Platinum! Riches. Treasure. -->
 
 merchant/inn keeper constructor
 -- inventory {}
