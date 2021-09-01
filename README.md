@@ -1,4 +1,41 @@
-# _{Application Name}_
+
+What is our excellent THEME??: Near Future Space Opera [VS Billionaires]
+space miners, 
+
+- character constructor [this is for characters & enemies]
+-- name
+-- level
+---- exp
+-- class [attack, defense, hp]
+<!-- -- race -->
+<!-- -- hp -->
+<!-- -- stats -->
+<!-- -- attack
+-- defense -->
+<!-- ** held items/weapons [wait on this, cause it's going to be hard] -->
+-- inventory {}
+-- MONEY GOLD PIECES! Platinum! Riches. Treasure.
+
+merchant/inn keeper constructor
+-- inventory {}
+-- buy/sell prototype
+<!-- -- dialogue -->
+
+Character.prototype.fight 
+if character 1 attack roll > character 2 defense roll
+then character 1 does x damage
+at what point does one win?
+
+Character.prototype.exp
+then how much exp is granted?
+how much exp does it take to lvl?
+
+Character.prototype.loot
+defeated character inventory moves to player character's inventory [buttons to take, instead of auto-giving]
+
+
+
+# _RPG!_
 
 #### _{Brief description of application}_
 
