@@ -36,11 +36,12 @@ describe('Character', () => {
     expect(player.money).toEqual(4);
   });
 
-  test('should subtract money from player.money', () => {
+  test('should subtract money from player.money and add item to player inventory', () => {
     let player3 = new Character("Rich Guy", 1, 0, "CTO", ["rolex", "mega gulp"], 1501);
     let selected = "lobster bisque for one";
     player3.buyItem(selected);
     expect(player3.money).toEqual(1);
+    expect(player3.inventory).toEqual(["rolex", "mega gulp", "lobster bisque for one"]);
   });
 });
 
