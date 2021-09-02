@@ -5,8 +5,10 @@ import {items} from './../src/world-inventory.js';
 
 describe('Character', () => {
   let player;
+  let player2;
   beforeEach(() => {
     player = new Character("That Guy", 1, 0, "Civilian", ["sack lunch", "mega gulp"], 0);
+    player2 = new Character("Jerry", 1, 0, goon.job, goon.inventory, goon.money, goon.attack, goon.defense, goon.hp)
   });
 
   test('should build a character with the Character traits chosen by the user', () => {
@@ -19,7 +21,6 @@ describe('Character', () => {
   });
 
   test('should add correct starting values based on chosen job [goon]', () => {
-    let player2 = new Character("Jerry", 1, 0, goon.job, goon.inventory, goon.money);
     expect(player2.job).toEqual("Goon");
     expect(player2.inventory).toEqual(["hockey stick", "skates", "mega gulp"]);
     expect(player2.money).toEqual(10);
@@ -27,7 +28,6 @@ describe('Character', () => {
 
   
   test('should add correct starting values based on chosen job [goon]', () => {
-    let player2 = new Character("Jerry", 1, 0, goon.job, goon.inventory, goon.money, goon.attack, goon.defense, goon.hp);
     expect(player2.attack).toEqual(1);
     expect(player2.defense).toEqual(2);
     expect(player2.hp).toEqual(20);
@@ -53,10 +53,15 @@ describe('Character', () => {
   });
 
   test('should add the player attack modifier to the attackRoll', () =>  {
-    let player2 = new Character("Jerry", 1, 0, goon.job, goon.inventory, goon.money, goon.attack, goon.defense, goon.hp);
     expect(player2.attackRoll()).toBeGreaterThanOrEqual(2);
     expect(player2.attackRoll()).toBeLessThanOrEqual(7);
   });
+
+  test("should subtract player defense modifier from totalDamage & return finalDamage", () => {
+    let attackDamage = 4;
+    expect(player2.defend(attackDamage)).toEqual(2);
+  });
+
 });
 
 describe('Merchant', () => {

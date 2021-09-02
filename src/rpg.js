@@ -43,11 +43,15 @@ export class Character {
   }
   attackRoll() {
     let damage = dice6();
-    console.log(damage);
-    let finalDamage = damage + this.attack;
-    console.log(finalDamage);
+    let totalDamage = damage + this.attack;
+    return totalDamage;
+  }
+
+  defend(attackDamage) {
+    let finalDamage = attackDamage - this.defense;
     return finalDamage;
   }
+  
 }
 
 export class Job {
