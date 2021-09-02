@@ -62,6 +62,12 @@ describe('Character', () => {
     expect(player2.defend(attackDamage)).toEqual(2);
   });
 
+  test("should subtract finalDamage from player HP", () => {
+    let finalDamage = 4;
+    player2.healthLoss(finalDamage);
+    expect(player2.hp).toEqual(16);
+  });
+
 });
 
 describe('Merchant', () => {

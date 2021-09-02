@@ -52,6 +52,10 @@ export class Character {
     return finalDamage;
   }
   
+  healthLoss(finalDamage) {
+    return this.hp -= finalDamage;
+  }
+
 }
 
 export class Job {
