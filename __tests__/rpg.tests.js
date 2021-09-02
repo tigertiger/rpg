@@ -68,6 +68,12 @@ describe('Character', () => {
     expect(player2.hp).toEqual(16);
   });
 
+  test("should return a death message if player HP is 0 or less", () => {
+    let finalDamage = 20;
+    expect(player2.healthLoss(finalDamage)).toBe("You dead.");
+    expect(player2.hp).toEqual(0);
+  });
+
 });
 
 describe('Merchant', () => {

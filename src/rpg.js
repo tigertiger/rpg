@@ -53,7 +53,12 @@ export class Character {
   }
   
   healthLoss(finalDamage) {
-    return this.hp -= finalDamage;
+    this.hp -= finalDamage;
+    if (this.hp <= 0) {
+      return "You dead."
+    } else {
+      return this.hp;
+    }
   }
 
 }
