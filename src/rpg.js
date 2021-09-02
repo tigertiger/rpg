@@ -31,7 +31,12 @@ export class Character {
   }
 
   buyItem(selected) {
-
+    this.inventory.push(selected);
+    for (let w=0; w<items.length; w++){
+      if (selected === items[w].item){
+        return this.money -= items[w].price;
+      }
+    }
   }
 }
 
