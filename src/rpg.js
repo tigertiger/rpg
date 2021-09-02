@@ -23,6 +23,13 @@ export class Character {
     }
   }
   
+  assignJobGoon(){
+    this.job = "goon";
+    this.attack = 5;
+    this.defense = 30;
+    this.hp = 100;
+  }
+
   sellItem(selected) {
     let index = this.inventory.indexOf(selected);
     this.inventory.splice(index,1);

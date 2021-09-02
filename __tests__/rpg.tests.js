@@ -74,6 +74,12 @@ describe('Character', () => {
     expect(player2.hp).toEqual(0);
   });
 
+  test('should add dead characters exp to live characters exp', () => {
+    let steve = new Character("Steve", 1, 50, pencilPusher.job, pencilPusher.inventory, pencilPusher.money, pencilPusher.attack, pencilPusher.defense, pencilPusher.hp);
+    let finalDamage = 10;
+    steve.healthLoss(finalDamage);
+    expect(player2.exp).toEqual(50);
+  });
 });
 
 describe('Merchant', () => {
