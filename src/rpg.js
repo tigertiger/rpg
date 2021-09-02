@@ -41,6 +41,13 @@ export class Character {
       }
     }
   }
+  attackRoll() {
+    let damage = dice6();
+    console.log(damage);
+    let finalDamage = damage + this.attack;
+    console.log(finalDamage);
+    return finalDamage;
+  }
 }
 
 export class Job {
@@ -71,7 +78,8 @@ export class Merchant {
   }
 }
 
-export function attackRoll() {
+export function dice6() {
   let number = Math.floor((Math.random() * 6) + 1);
   return number;
 }
+

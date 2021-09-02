@@ -1,4 +1,4 @@
-import {Character, Job, Merchant, attackRoll} from './../src/rpg.js';
+import {Character, Job, Merchant, dice6, attackRoll} from './../src/rpg.js';
 import {goon} from './../src/jobs.js';
 import {otik} from './../src/npcs.js';
 import {items} from './../src/world-inventory.js';
@@ -51,6 +51,12 @@ describe('Character', () => {
     expect(player3.money).toEqual(1);
     expect(player3.inventory).toEqual(["rolex", "mega gulp", "lobster bisque for one"]);
   });
+
+  test('should add the player attack modifier to the attackRoll', () =>  {
+    let player2 = new Character("Jerry", 1, 0, goon.job, goon.inventory, goon.money, goon.attack, goon.defense, goon.hp);
+    expect(player2.attackRoll()).toBeGreaterThanOrEqual(2);
+    expect(player2.attackRoll()).toBeLessThanOrEqual(7);
+  });
 });
 
 describe('Merchant', () => {
@@ -61,11 +67,12 @@ describe('Merchant', () => {
   test("should correctly display the buy price of items", () => {
     expect(otik.viewPrice()).toEqual(10);
   });
+
 });
 
-describe('attackRoll', () => {
+describe('dice6', () => {
   test('should generate an attack of one dice roll', () => {
-    expect(attackRoll()).toBeGreaterThanOrEqual(1);
-    expect(attackRoll()).toBeLessThanOrEqual(6);
+    expect(dice6()).toBeGreaterThanOrEqual(1);
+    expect(dice6()).toBeLessThanOrEqual(6);
   });
 });
