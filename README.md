@@ -109,4 +109,7 @@ Chynna Lew <chynnalew@yahoo.com>
 Melissa Schatz-Miller <melissa.scmi@gmail.com>
 Scott Hutley <scotthutley1@comcast.net>
 
-Please feel free to reach out to me with suggested changes/improvements, or if you have any questions.
+Please feel free to reach out to us with suggested changes/improvements, or if you have any questions.
+
+////////
+
