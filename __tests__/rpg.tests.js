@@ -35,6 +35,13 @@ describe('Character', () => {
     expect(player.inventory).toEqual(["sack lunch"]);
     expect(player.money).toEqual(4);
   });
+
+  test('should subtract money from player.money', () => {
+    let player3 = new Character("Rich Guy", 1, 0, "CTO", ["rolex", "mega gulp"], 1501);
+    let selected = "lobster bisque for one";
+    player3.buyItem(selected);
+    expect(player3.money).toEqual(1);
+  });
 });
 
 describe('Merchant', () => {
@@ -46,13 +53,3 @@ describe('Merchant', () => {
     expect(otik.viewPrice()).toEqual(10);
   });
 });
-
-// A property can be unpacked from an object and assigned to a variable with a different name than the object property.
-
-// const o = {p: 42, q: true};
-// const {p: foo, q: bar} = o;
-
-// console.log(foo); // 42
-// console.log(bar); // true
-// Copy to Clipboard
-// Here, for example, const {p: foo} = o takes from the object o the property named p and assigns it to a local variable named foo.

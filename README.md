@@ -113,3 +113,24 @@ Please feel free to reach out to us with suggested changes/improvements, or if y
 
 ////////
 
+function encounter(ranNumber) {
+let ranNumber = Math.floor((Math.random() *20) + 1);
+ if (ranNumber <= 5) {
+return "Low Level Pencil Pusher";
+} else if (ranNumber >=6 && ranNumber <= 10) {
+return "Code Monkey";
+} else if (ranNumber >= 11 && ranNumber <= 16) {
+return "Try-Hard Patrick Bateman-type";
+} else if (ranNumber = 17) {
+return "Darth Gates";
+} else if (ranNumber = 18) {
+return "Boba Branson";
+} else if (ranNumber = 19) {
+return "Mark Zuckussberg";
+} else if (ranNumber = 20) {
+return "Geoffrey Bezos"
+}
+
+how do you attack
+how do you loot
+how do you die

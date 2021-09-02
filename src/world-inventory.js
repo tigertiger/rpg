@@ -4,4 +4,8 @@ export const items = [
   {item: "sack lunch", price: 5},
   {item: "skates", price: 60},
   {item: "soup for your family", price: 10},
+  {item: "lobster bisque for one", price: 1500},
+  {item: "someone else's house", price: 20000},
+  {item: "rolex", price: 1000},
+  {item: "fendi briefcase", price: 2000},
 ]

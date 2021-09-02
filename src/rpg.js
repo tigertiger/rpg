@@ -29,6 +29,10 @@ export class Character {
       }
     }
   }
+
+  buyItem(selected) {
+
+  }
 }
 
 export class Job {
