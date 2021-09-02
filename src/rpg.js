@@ -1,13 +1,16 @@
 import {items} from './../src/world-inventory.js';
 
 export class Character {
-  constructor(name, level, exp, job, inventory, money) {
+  constructor(name, level, exp, job, inventory, money, attack, defense, hp) {
     this.name = name;
     this.level = level;
     this.exp = exp;
     this.job = job;
     this.inventory = inventory;
     this.money = money;
+    this.attack = attack;
+    this.defense = defense;
+    this.hp = hp;
   }
 
   viewSellPrice() {
@@ -41,10 +44,13 @@ export class Character {
 }
 
 export class Job {
-  constructor(job, inventory, money) {
+  constructor(job, inventory, money, attack, defense, hp) {
     this.job = job;
     this.inventory = inventory;
     this.money = money;
+    this.attack = attack;
+    this.defense = defense;
+    this.hp = hp;
   }
 }
 

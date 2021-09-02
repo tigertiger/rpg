@@ -25,6 +25,18 @@ describe('Character', () => {
     expect(player2.money).toEqual(10);
   });
 
+  // test('should generate an attack of one dice roll'), () => {
+  //   expect(player.attackRoll ()).isGreaterThanOrEqualTo(1);
+  //   expect(player.attackRoll ()).isLessThanOrEqualTo(6);
+  // });
+
+  test('should add correct starting values based on chosen job [goon]', () => {
+    let player2 = new Character("Jerry", 1, 0, goon.job, goon.inventory, goon.money, goon.attack, goon.defense, goon.hp);
+    expect(player2.attack).toEqual(1);
+    expect(player2.defense).toEqual(2);
+    expect(player2.hp).toEqual(20);
+  });
+
   test("should correctly display the sell price of user items", () => {
     expect(player.viewSellPrice()).toEqual(4,4);
   });
